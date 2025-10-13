@@ -4580,7 +4580,7 @@ input.main-search-input::placeholder {
 
 /* 14.Footer */
 .footer-top {
-  padding: 50px 50px;
+  padding: 10px 10px;
   background: var(--theme2);
   margin-bottom: 40px;
   border-radius: 20px;
@@ -4627,7 +4627,7 @@ input.main-search-input::placeholder {
 }
 
 .footer-widgets-wrapper {
-  padding: 90px 0 120px;
+  padding: 20px 0 20px;
   position: relative;
   z-index: 9;
 }
