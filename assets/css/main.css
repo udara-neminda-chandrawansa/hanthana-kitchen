@@ -4889,6 +4889,23 @@ input.main-search-input::placeholder {
     flex-wrap: wrap;
     gap: 20px;
     justify-content: center !important;
+    padding: 15px 0;
+  }
+  .footer-bottom .footer-wrapper p {
+    font-size: 14px;
+    line-height: 1.6;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-bottom .footer-wrapper {
+    padding: 12px 0;
+  }
+  .footer-bottom .footer-wrapper p {
+    font-size: 12px;
+    line-height: 1.5;
+    padding: 0 10px;
   }
 }
 .footer-bottom .footer-wrapper p {
@@ -12894,5 +12911,32 @@ table.woocommerce-product-attributes {
 }
 .my-float {
   margin-top: 12px;
+}
+
+/* Responsive styles for floating buttons */
+@media (max-width: 768px) {
+  .float {
+    width: 45px;
+    height: 45px;
+    left: 20px;
+    bottom: 80px;
+    font-size: 22px;
+  }
+  .my-float {
+    margin-top: 11px;
+  }
+}
+
+@media (max-width: 480px) {
+  .float {
+    width: 42px;
+    height: 42px;
+    left: 15px;
+    bottom: 70px;
+    font-size: 20px;
+  }
+  .my-float {
+    margin-top: 10px;
+  }
 }
 /*# sourceMappingURL=main.css.map */
