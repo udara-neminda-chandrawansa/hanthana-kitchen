@@ -1,4 +1,10 @@
 @charset "UTF-8";
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
 /*-----------------------------------------------------------------
 Theme Name: Fresheat
 Author: Gramentheme

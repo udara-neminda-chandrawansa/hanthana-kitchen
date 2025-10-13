@@ -829,6 +829,38 @@ JS TABLE OF CONTENTS
             e.stopPropagation();
         });
 
+        /*-----------------------------------
+          27. Smooth Scrolling for Navigation Links 
+        -----------------------------------*/
+        // Add smooth scrolling to navigation links
+        $('nav a[href^="#"], .main-menu a[href^="#"]').on('click', function(e) {
+            e.preventDefault();
+            
+            var target = this.hash;
+            var $target = $(target);
+            
+            if ($target.length) {
+                $('html, body').animate({
+                    scrollTop: $target.offset().top - 80 // Offset for fixed header
+                }, 800, 'swing');
+            }
+        });
+
+        // Update active nav item on scroll
+        $(window).on('scroll', function() {
+            var scrollPos = $(document).scrollTop();
+            
+            $('nav a[href^="#"], .main-menu a[href^="#"]').each(function() {
+                var currLink = $(this);
+                var refElement = $(currLink.attr("href"));
+                
+                if (refElement.length && refElement.position().top - 100 <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
+                    $('nav a[href^="#"], .main-menu a[href^="#"]').parent().removeClass("active");
+                    currLink.parent().addClass("active");
+                }
+            });
+        });
+
     }); // End Document Ready Function
 
 
