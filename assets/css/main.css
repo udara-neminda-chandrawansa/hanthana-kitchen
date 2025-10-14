@@ -5202,6 +5202,17 @@ input.main-search-input::placeholder {
   font-style: normal;
   font-weight: 400;
   line-height: 26px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+.contact-box.style1 p a {
+  display: inline-block;
+  max-width: 100%;
+  word-break: break-all;
+  transition: color 0.3s ease;
+}
+.contact-box.style1 p a:hover {
+  opacity: 0.8;
 }
 
 /* 16.Banner */
