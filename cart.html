@@ -31,6 +31,8 @@
     <link rel="stylesheet" href="assets/css/nice-select.css">
     <!--<< Main.css >>-->
     <link rel="stylesheet" href="assets/css/main.css">
+    <!--<< Mobile Responsive Enhancements >>-->
+    <link rel="stylesheet" href="assets/css/mobile-responsive-enhancements.css">
 </head>
 
 <body class="bg-color2">
@@ -578,7 +580,7 @@
                 <div class="woocommerce-message">Shipping costs updated.</div>
             </div>
             <form action="#" class="woocommerce-cart-form">
-                <table class="cart_table">
+                <table class="cart_table table-responsive">
                     <thead>
                         <tr>
                             <th class="cart-col-image">Menu Image</th>
@@ -592,27 +594,35 @@
                     <tbody>
                         <tr class="cart_item">
                             <td data-title="Product">
-                                <a class="cartimage" href="shop-details.html"><img width="91" height="91"
-                                        src="assets/img/dishes/dishes4_1.png" alt="Image"></a>
+                                <a class="cartimage" href="shop-details.html" aria-label="View Brick Oven Pepperoni Details">
+                                    <img width="91" height="91" src="assets/img/dishes/dishes4_1.png" alt="Brick Oven Pepperoni">
+                                </a>
                             </td>
                             <td data-title="Name">
-                                <a class="cartname" href="shop-detailis.html">Brick Oven Pepperoni</a>
+                                <a class="cartname" href="shop-details.html">Brick Oven Pepperoni</a>
                             </td>
                             <td data-title="Price">
                                 <span class="amount"><bdi><span>Rs</span>18</bdi></span>
                             </td>
                             <td data-title="Quantity">
                                 <div class="quantity">
-                                    <button class="quantity-minus qty-btn"><i class="far fa-minus"></i></button>
-                                    <input type="number" class="qty-input" value="1" min="1" max="99">
-                                    <button class="quantity-plus qty-btn"><i class="far fa-plus"></i></button>
+                                    <button type="button" class="quantity-minus qty-btn" aria-label="Decrease quantity">
+                                        <i class="far fa-minus"></i>
+                                    </button>
+                                    <input type="number" class="qty-input" value="1" min="1" max="99" 
+                                           aria-label="Quantity" pattern="[0-9]*" inputmode="numeric">
+                                    <button type="button" class="quantity-plus qty-btn" aria-label="Increase quantity">
+                                        <i class="far fa-plus"></i>
+                                    </button>
                                 </div>
                             </td>
                             <td data-title="Total">
                                 <span class="amount"><bdi><span>Rs</span>18</bdi></span>
                             </td>
                             <td data-title="Remove">
-                                <a href="#" class="remove"><i class="fal fa-trash-alt"></i></a>
+                                <a href="#" class="remove" aria-label="Remove Brick Oven Pepperoni from cart">
+                                    <i class="fal fa-trash-alt"></i>
+                                </a>
                             </td>
                         </tr>
                         <tr class="cart_item">
@@ -1010,6 +1020,8 @@
     <script src="assets/js/nice-select.min.js"></script>
     <!--<< Main.js >>-->
     <script src="assets/js/main.js"></script>
+    <!--<< Mobile Enhancements.js >>-->
+    <script src="assets/js/mobile-enhancements.js"></script>
 
     <!--Messenger and WhatsApp Floating btns-->
     <a href="https://m.me/94771200180" class="float" style="z-index: 999999;">

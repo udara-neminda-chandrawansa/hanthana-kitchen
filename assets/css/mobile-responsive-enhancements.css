@@ -1,0 +1,846 @@
+/* ===================================
+   HANTHANA KITCHEN - MOBILE RESPONSIVE ENHANCEMENTS
+   Author: GitHub Copilot
+   Version: 1.0
+   Description: Comprehensive mobile responsiveness improvements
+   =================================== */
+
+/* ===================================
+   1. GENERAL MOBILE OPTIMIZATIONS
+   =================================== */
+
+/* Enhanced viewport handling */
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+}
+
+/* Improved touch targets */
+* {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0.1);
+  -webkit-touch-callout: none;
+}
+
+/* Better mobile scrolling */
+body {
+  -webkit-overflow-scrolling: touch;
+  overflow-x: hidden;
+}
+
+/* ===================================
+   2. ENHANCED TYPOGRAPHY FOR MOBILE
+   =================================== */
+
+/* Improved font scaling */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 28px !important;
+    line-height: 1.2 !important;
+  }
+  
+  h2 {
+    font-size: 24px !important;
+    line-height: 1.3 !important;
+  }
+  
+  h3 {
+    font-size: 20px !important;
+    line-height: 1.4 !important;
+  }
+  
+  h4 {
+    font-size: 18px !important;
+    line-height: 1.4 !important;
+  }
+  
+  h5 {
+    font-size: 16px !important;
+    line-height: 1.4 !important;
+  }
+  
+  h6 {
+    font-size: 14px !important;
+    line-height: 1.5 !important;
+  }
+  
+  p, span {
+    font-size: 14px !important;
+    line-height: 1.6 !important;
+  }
+}
+
+/* ===================================
+   3. ENHANCED NAVIGATION FOR MOBILE
+   =================================== */
+
+/* Better mobile menu */
+@media (max-width: 1199px) {
+  .header-section .main-header-wrapper {
+    padding: 10px 0;
+    justify-content: space-between;
+  }
+  
+  .header-section .logo-image {
+    padding: 10px 0 !important;
+  }
+  
+  .header-section .logo-image img {
+    max-height: 40px;
+    width: auto;
+  }
+}
+
+/* Enhanced mobile menu button */
+@media (max-width: 991px) {
+  .mean-container a.meanmenu-reveal {
+    display: block !important;
+    background: var(--theme);
+    color: var(--white) !important;
+    padding: 12px 15px;
+    font-size: 18px;
+    border-radius: 8px;
+    border: none;
+    min-height: 48px;
+    min-width: 48px;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .mean-container a.meanmenu-reveal:hover {
+    background: var(--theme2);
+  }
+  
+  .mean-container .mean-nav {
+    background: var(--white);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin-top: 10px;
+    max-height: 70vh;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  .mean-container .mean-nav ul li a {
+    padding: 15px 20px !important;
+    font-size: 16px !important;
+    min-height: 48px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #f0f0f0 !important;
+  }
+  
+  .mean-container .mean-nav ul li a:hover {
+    background: var(--bg2);
+    color: var(--theme) !important;
+  }
+}
+
+/* Touch-friendly menu items */
+@media (max-width: 767px) {
+  .mean-container .mean-nav ul li a {
+    padding: 18px 20px !important;
+    font-size: 18px !important;
+    min-height: 52px;
+  }
+}
+
+/* ===================================
+   4. IMPROVED LAYOUT & GRID SYSTEM
+   =================================== */
+
+/* Better container spacing */
+@media (max-width: 575px) {
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  
+  .container-fluid {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+  }
+}
+
+/* Enhanced section padding */
+@media (max-width: 767px) {
+  .section-padding {
+    padding: 40px 0 !important;
+  }
+  
+  .section-padding1 {
+    padding: 80px 0 40px !important;
+  }
+  
+  .section-padding2 {
+    padding: 40px 0 120px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-padding {
+    padding: 30px 0 !important;
+  }
+  
+  .section-padding1 {
+    padding: 60px 0 30px !important;
+  }
+  
+  .section-padding2 {
+    padding: 30px 0 100px !important;
+  }
+}
+
+/* Better grid spacing */
+@media (max-width: 767px) {
+  .row > * {
+    margin-bottom: 30px;
+  }
+  
+  .row > *:last-child {
+    margin-bottom: 0;
+  }
+}
+
+/* ===================================
+   5. ENHANCED BUTTON RESPONSIVENESS
+   =================================== */
+
+/* Touch-friendly buttons */
+.theme-btn {
+  min-height: 48px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+@media (max-width: 767px) {
+  .theme-btn {
+    padding: 15px 20px !important;
+    font-size: 14px !important;
+    min-height: 48px;
+    width: auto;
+  }
+  
+  .theme-btn.style2 {
+    padding: 15px 30px !important;
+    font-size: 14px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .theme-btn {
+    padding: 12px 18px !important;
+    font-size: 13px !important;
+    width: 100%;
+    max-width: 280px;
+    margin: 0 auto;
+  }
+}
+
+/* ===================================
+   6. FORM ENHANCEMENTS FOR MOBILE
+   =================================== */
+
+/* Better form controls */
+@media (max-width: 767px) {
+  input.form-control,
+  textarea.form-control {
+    padding: 15px 12px !important;
+    font-size: 16px !important; /* Prevents zoom on iOS */
+    min-height: 48px;
+    border-radius: 8px !important;
+  }
+  
+  textarea.form-control {
+    min-height: 120px;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+}
+
+/* Enhanced select elements */
+@media (max-width: 767px) {
+  select,
+  .nice-select {
+    min-height: 48px !important;
+    font-size: 16px !important;
+    padding: 12px 15px !important;
+  }
+}
+
+/* Better checkbox and radio buttons */
+@media (max-width: 767px) {
+  input[type="checkbox"] ~ label,
+  input[type="radio"] ~ label {
+    font-size: 14px;
+    line-height: 1.6;
+    padding-left: 35px;
+    min-height: 30px;
+    display: flex;
+    align-items: center;
+  }
+  
+  input[type="checkbox"] ~ label:before,
+  input[type="radio"] ~ label:before {
+    width: 24px;
+    height: 24px;
+    top: 3px;
+  }
+}
+
+/* ===================================
+   7. CARD & CONTENT RESPONSIVENESS
+   =================================== */
+
+/* Enhanced card layouts */
+@media (max-width: 767px) {
+  .dishes-card,
+  .blog-card,
+  .chefe-card {
+    margin-bottom: 30px;
+  }
+  
+  .dishes-card .dishes-content,
+  .blog-card .blog-content,
+  .chefe-card .chefe-content {
+    padding: 20px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .dishes-card .dishes-content,
+  .blog-card .blog-content,
+  .chefe-card .chefe-content {
+    padding: 15px !important;
+  }
+}
+
+/* Better image containers */
+@media (max-width: 767px) {
+  .dishes-card .dishes-thumb,
+  .blog-card .blog-thumb,
+  .chefe-card .chefe-thumb {
+    overflow: hidden;
+    border-radius: 8px;
+  }
+  
+  .dishes-card .dishes-thumb img,
+  .blog-card .blog-thumb img,
+  .chefe-card .chefe-thumb img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+}
+
+/* ===================================
+   8. GALLERY & IMAGE RESPONSIVENESS
+   =================================== */
+
+/* Enhanced gallery grid */
+@media (max-width: 767px) {
+  .gallery-section .row {
+    margin: 0 -10px;
+  }
+  
+  .gallery-section .row > * {
+    padding: 0 10px;
+    margin-bottom: 20px;
+  }
+  
+  .gallery-section img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+  }
+}
+
+/* Touch-friendly gallery */
+@media (max-width: 480px) {
+  .gallery-section .row {
+    margin: 0 -5px;
+  }
+  
+  .gallery-section .row > * {
+    padding: 0 5px;
+    margin-bottom: 15px;
+  }
+}
+
+/* Better image aspect ratios */
+@media (max-width: 767px) {
+  .image-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+  }
+  
+  .image-container::before {
+    content: "";
+    display: block;
+    padding-top: 75%; /* 4:3 aspect ratio */
+  }
+  
+  .image-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+/* ===================================
+   9. FLOATING ELEMENTS OPTIMIZATION
+   =================================== */
+
+/* Enhanced floating social buttons */
+.float {
+  position: fixed !important;
+  width: 50px !important;
+  height: 50px !important;
+  bottom: 80px !important;
+  right: 20px !important;
+  background-color: #0084ff !important;
+  color: white !important;
+  border-radius: 50% !important;
+  text-align: center !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+  z-index: 1000 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: 24px !important;
+  transition: all 0.3s ease !important;
+}
+
+.float:hover {
+  transform: scale(1.1) !important;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* Better positioning on mobile */
+@media (max-width: 767px) {
+  .float {
+    width: 45px !important;
+    height: 45px !important;
+    bottom: 70px !important;
+    right: 15px !important;
+    font-size: 20px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .float {
+    width: 40px !important;
+    height: 40px !important;
+    bottom: 60px !important;
+    right: 10px !important;
+    font-size: 18px !important;
+  }
+}
+
+/* WhatsApp widget adjustments */
+@media (max-width: 767px) {
+  .delightchat-whatsapp-launcher {
+    bottom: 20px !important;
+    left: 20px !important;
+    width: 45px !important;
+    height: 45px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .delightchat-whatsapp-launcher {
+    bottom: 15px !important;
+    left: 15px !important;
+    width: 40px !important;
+    height: 40px !important;
+  }
+}
+
+/* ===================================
+   10. SHOPPING CART & CHECKOUT
+   =================================== */
+
+/* Enhanced cart table */
+@media (max-width: 767px) {
+  .cart_table {
+    font-size: 14px !important;
+  }
+  
+  .cart_table thead {
+    display: none;
+  }
+  
+  .cart_table tbody tr {
+    display: block;
+    border: 1px solid #ddd;
+    margin-bottom: 15px;
+    padding: 15px;
+    border-radius: 8px;
+  }
+  
+  .cart_table tbody td {
+    display: block;
+    text-align: left !important;
+    padding: 8px 0 !important;
+    border: none !important;
+  }
+  
+  .cart_table tbody td:before {
+    content: attr(data-title) ": ";
+    font-weight: bold;
+    display: inline-block;
+    width: 100px;
+  }
+}
+
+/* Better quantity controls */
+@media (max-width: 767px) {
+  .quantity .qty-btn {
+    width: 35px !important;
+    height: 35px !important;
+    font-size: 16px !important;
+  }
+  
+  .quantity .qty-input {
+    width: 60px !important;
+    height: 35px !important;
+    font-size: 14px !important;
+  }
+}
+
+/* Enhanced checkout forms */
+@media (max-width: 767px) {
+  .checkout .form-row {
+    margin-bottom: 20px;
+  }
+  
+  .checkout .form-row-wide {
+    width: 100% !important;
+  }
+  
+  .checkout .form-row-first,
+  .checkout .form-row-last {
+    width: 100% !important;
+    margin-bottom: 15px;
+  }
+}
+
+/* ===================================
+   11. SEARCH & FILTERS
+   =================================== */
+
+/* Better search interface */
+@media (max-width: 767px) {
+  .search-wrap .search-field-holder {
+    width: 90% !important;
+    padding: 0 20px;
+  }
+  
+  .search-wrap .main-search-input {
+    font-size: 18px !important;
+    height: 50px !important;
+    padding: 0 20px !important;
+  }
+  
+  .search-close {
+    top: 30px !important;
+    right: 30px !important;
+    font-size: 24px !important;
+  }
+}
+
+/* Enhanced filter sidebar */
+@media (max-width: 991px) {
+  .main-sidebar {
+    margin-top: 40px;
+  }
+  
+  .single-sidebar-widget {
+    padding: 25px 20px !important;
+    margin-bottom: 25px !important;
+  }
+}
+
+/* ===================================
+   12. MODAL & POPUP ENHANCEMENTS
+   =================================== */
+
+/* Better modal responsiveness */
+@media (max-width: 767px) {
+  .modal-dialog {
+    margin: 20px !important;
+    max-width: calc(100% - 40px) !important;
+  }
+  
+  .modal-content {
+    border-radius: 12px !important;
+  }
+  
+  .modal-header,
+  .modal-body,
+  .modal-footer {
+    padding: 20px !important;
+  }
+  
+  .modal-title {
+    font-size: 20px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .modal-dialog {
+    margin: 10px !important;
+    max-width: calc(100% - 20px) !important;
+  }
+  
+  .modal-header,
+  .modal-body,
+  .modal-footer {
+    padding: 15px !important;
+  }
+}
+
+/* ===================================
+   13. BREADCRUMB & NAVIGATION AIDS
+   =================================== */
+
+/* Enhanced breadcrumbs */
+@media (max-width: 767px) {
+  .breadcumb-section {
+    padding: 20px 0 !important;
+  }
+  
+  .breadcumb-wrapper {
+    text-align: center;
+  }
+  
+  .breadcrumb {
+    justify-content: center;
+    font-size: 14px;
+  }
+  
+  .breadcrumb-item {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 150px;
+  }
+}
+
+/* ===================================
+   14. LOADING & PERFORMANCE
+   =================================== */
+
+/* Better loading states */
+@media (max-width: 767px) {
+  .preloader .animation-preloader .spinner {
+    width: 60px !important;
+    height: 60px !important;
+  }
+  
+  .preloader .animation-preloader .txt-loading {
+    font-size: 20px !important;
+  }
+}
+
+/* ===================================
+   15. ACCESSIBILITY IMPROVEMENTS
+   =================================== */
+
+/* Enhanced focus states */
+a:focus,
+button:focus,
+input:focus,
+textarea:focus,
+select:focus {
+  outline: 2px solid var(--theme) !important;
+  outline-offset: 2px !important;
+}
+
+/* Better link spacing */
+@media (max-width: 767px) {
+  a {
+    min-height: 24px;
+    display: inline-block;
+    padding: 2px 0;
+  }
+}
+
+/* ===================================
+   16. BACK TO TOP BUTTON
+   =================================== */
+
+/* Enhanced back to top */
+.back-to-top {
+  width: 45px !important;
+  height: 45px !important;
+  line-height: 45px !important;
+  bottom: 140px !important;
+  right: 20px !important;
+  font-size: 16px !important;
+  border-radius: 50% !important;
+}
+
+@media (max-width: 767px) {
+  .back-to-top {
+    width: 40px !important;
+    height: 40px !important;
+    line-height: 40px !important;
+    bottom: 130px !important;
+    right: 15px !important;
+    font-size: 14px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .back-to-top {
+    width: 35px !important;
+    height: 35px !important;
+    line-height: 35px !important;
+    bottom: 120px !important;
+    right: 10px !important;
+    font-size: 12px !important;
+  }
+}
+
+/* ===================================
+   17. LANDSCAPE ORIENTATION
+   =================================== */
+
+/* Better landscape mobile layout */
+@media screen and (orientation: landscape) and (max-height: 500px) {
+  .section-padding {
+    padding: 20px 0 !important;
+  }
+  
+  .header-section {
+    min-height: auto !important;
+  }
+  
+  .breadcumb-section {
+    padding: 10px 0 !important;
+  }
+}
+
+/* ===================================
+   18. PRINT STYLES
+   =================================== */
+
+@media print {
+  .float,
+  .back-to-top,
+  .header-section,
+  .footer-section,
+  .delightchat-whatsapp-launcher {
+    display: none !important;
+  }
+  
+  body {
+    font-size: 12pt !important;
+    line-height: 1.4 !important;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    page-break-after: avoid;
+  }
+  
+  .section-padding {
+    padding: 10pt 0 !important;
+  }
+}
+
+/* ===================================
+   19. HIGH DPI DISPLAY SUPPORT
+   =================================== */
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .logo-image img {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+  }
+}
+
+/* ===================================
+   20. REDUCED MOTION SUPPORT
+   =================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  
+  .float-bob-x,
+  .float-bob-y,
+  .cir36 {
+    animation: none !important;
+  }
+}
+
+/* ===================================
+   21. UTILITY CLASSES FOR MOBILE
+   =================================== */
+
+/* Hide elements on mobile */
+.mobile-hidden {
+  display: none !important;
+}
+
+@media (min-width: 768px) {
+  .mobile-hidden {
+    display: block !important;
+  }
+}
+
+/* Show only on mobile */
+.mobile-only {
+  display: block !important;
+}
+
+@media (min-width: 768px) {
+  .mobile-only {
+    display: none !important;
+  }
+}
+
+/* Mobile text alignment */
+@media (max-width: 767px) {
+  .text-center-mobile {
+    text-align: center !important;
+  }
+  
+  .text-left-mobile {
+    text-align: left !important;
+  }
+}
+
+/* Mobile margins */
+@media (max-width: 767px) {
+  .mb-mobile-30 {
+    margin-bottom: 30px !important;
+  }
+  
+  .mb-mobile-20 {
+    margin-bottom: 20px !important;
+  }
+  
+  .mb-mobile-15 {
+    margin-bottom: 15px !important;
+  }
+}
+
+/* ===================================
+   END OF MOBILE ENHANCEMENTS
+   =================================== */

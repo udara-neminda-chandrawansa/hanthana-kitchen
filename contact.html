@@ -32,6 +32,8 @@
     <link rel="stylesheet" href="assets/css/nice-select.css">
     <!--<< Main.css >>-->
     <link rel="stylesheet" href="assets/css/main.css">
+    <!--<< Mobile Responsive Enhancements >>-->
+    <link rel="stylesheet" href="assets/css/mobile-responsive-enhancements.css">
 </head>
 
 <body class="bg-color2">
@@ -618,33 +620,37 @@
                     <div class="col-xl-6">
                         <div class="contact-form style2">
                             <h2>Get in Touch</h2>
-                            <form class="row" action="#">
+                            <form class="row" action="#" novalidate>
                                 <div class="col-md-6">
-                                    <input type="text" placeholder="Full Name">
+                                    <input type="text" placeholder="Full Name" name="full_name" id="full_name" 
+                                           autocomplete="name" required aria-label="Full Name" class="form-control">
                                 </div>
                                 <div class="col-md-6">
-                                    <input type="email" placeholder="Email Address">
+                                    <input type="email" placeholder="Email Address" name="email" id="email" 
+                                           autocomplete="email" required aria-label="Email Address" class="form-control">
                                 </div>
                                 <div class="col-md-6">
-                                    <input type="number" placeholder="Phone Number">
+                                    <input type="tel" placeholder="Phone Number" name="phone" id="phone" 
+                                           autocomplete="tel" aria-label="Phone Number" class="form-control">
                                 </div>
                                 <div class="col-md-6">
-                                    <select name="orderby" class="single-select" aria-label="Shop order">
-                                        <option value="subject" selected="selected">Subject</option>
+                                    <select name="subject" class="single-select form-control" aria-label="Select Subject" id="subject">
+                                        <option value="" selected>Select Subject</option>
                                         <option value="complain">Complain</option>
                                         <option value="greetings">Greetings</option>
                                         <option value="date">Expire Date</option>
                                         <option value="price">About Price</option>
-                                        <option value="order">About order</option>
+                                        <option value="order">About Order</option>
                                     </select>
                                 </div>
                                 <div class="col-12">
-                                    <textarea id="message" placeholder="Write your message here..." rows="4"
-                                        style="width: 100%;"></textarea>
+                                    <textarea id="message" name="message" placeholder="Write your message here..." rows="4"
+                                        style="width: 100%;" aria-label="Message" class="form-control" required></textarea>
                                 </div>
                                 <div class="col-12 form-group mb-0">
-                                    <button class="theme-btn w-100">SUBMIT NOW <i
-                                            class="fa-sharp fa-regular fa-arrow-right-long bg-transparent text-white"></i></button>
+                                    <button type="submit" class="theme-btn w-100" aria-label="Submit Contact Form">
+                                        SUBMIT NOW <i class="fa-sharp fa-regular fa-arrow-right-long bg-transparent text-white"></i>
+                                    </button>
                                 </div>
                             </form>
                         </div>
@@ -886,6 +892,8 @@
     <script src="assets/js/nice-select.min.js"></script>
     <!--<< Main.js >>-->
     <script src="assets/js/main.js"></script>
+    <!--<< Mobile Enhancements.js >>-->
+    <script src="assets/js/mobile-enhancements.js"></script>
 
     <!--Messenger and WhatsApp Floating btns-->
     <a href="https://m.me/94771200180" class="float" style="z-index: 999999;">
