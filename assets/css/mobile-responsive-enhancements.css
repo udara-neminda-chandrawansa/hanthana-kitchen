@@ -406,14 +406,14 @@ body {
   position: fixed !important;
   width: 50px !important;
   height: 50px !important;
-  bottom: 80px !important;
+  bottom: 20px !important;
   right: 20px !important;
   background-color: #0084ff !important;
   color: white !important;
   border-radius: 50% !important;
   text-align: center !important;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
-  z-index: 1000 !important;
+  z-index: 999998 !important;
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
@@ -426,12 +426,16 @@ body {
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2) !important;
 }
 
+.float .my-float {
+  line-height: 1 !important;
+}
+
 /* Better positioning on mobile */
 @media (max-width: 767px) {
   .float {
     width: 45px !important;
     height: 45px !important;
-    bottom: 70px !important;
+    bottom: 20px !important;
     right: 15px !important;
     font-size: 20px !important;
   }
@@ -439,19 +443,27 @@ body {
 
 @media (max-width: 480px) {
   .float {
-    width: 40px !important;
-    height: 40px !important;
-    bottom: 60px !important;
-    right: 10px !important;
+    width: 42px !important;
+    height: 42px !important;
+    bottom: 15px !important;
+    right: 15px !important;
     font-size: 18px !important;
   }
 }
 
-/* WhatsApp widget adjustments */
+/* WhatsApp widget adjustments - Position on the left side */
+.delightchat-whatsapp-launcher {
+  bottom: 20px !important;
+  left: 20px !important;
+  width: 50px !important;
+  height: 50px !important;
+  z-index: 999997 !important;
+}
+
 @media (max-width: 767px) {
   .delightchat-whatsapp-launcher {
     bottom: 20px !important;
-    left: 20px !important;
+    left: 15px !important;
     width: 45px !important;
     height: 45px !important;
   }
@@ -461,8 +473,17 @@ body {
   .delightchat-whatsapp-launcher {
     bottom: 15px !important;
     left: 15px !important;
-    width: 40px !important;
-    height: 40px !important;
+    width: 42px !important;
+    height: 42px !important;
+  }
+}
+
+/* Ensure proper spacing between floating buttons */
+@media (max-width: 767px) {
+  /* Add margin to prevent overlap when both buttons are visible */
+  .float + .delightchat-whatsapp-launcher,
+  .delightchat-whatsapp-launcher + .float {
+    margin: 0 !important;
   }
 }
 
@@ -756,6 +777,101 @@ select:focus {
   
   .section-padding {
     padding: 10pt 0 !important;
+  }
+}
+
+/* ===================================
+   19. FLOATING BUTTONS OPTIMIZATION
+   =================================== */
+
+/* Enhanced touch targets for mobile */
+@media (max-width: 767px) {
+  .float,
+  .delightchat-whatsapp-launcher {
+    /* Ensure minimum 44px touch target */
+    min-width: 44px !important;
+    min-height: 44px !important;
+    /* Add touch-friendly cursor */
+    cursor: pointer !important;
+    /* Improve touch responsiveness */
+    -webkit-tap-highlight-color: transparent !important;
+    -webkit-touch-callout: none !important;
+    -webkit-user-select: none !important;
+    user-select: none !important;
+  }
+  
+  /* Prevent layout shift when hovering */
+  .float:hover,
+  .delightchat-whatsapp-launcher:hover {
+    transform: scale(1.05) !important;
+  }
+  
+  /* Better animation performance */
+  .float,
+  .delightchat-whatsapp-launcher {
+    will-change: transform !important;
+    backface-visibility: hidden !important;
+  }
+}
+
+/* Fix for overlapping with back-to-top button */
+#back-top,
+.back-to-top {
+  bottom: 80px !important;
+  right: 20px !important;
+  z-index: 999996 !important;
+  /* Ensure proper visibility and styling */
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+  background-color: var(--theme2) !important;
+  color: var(--white) !important;
+  border-radius: 12px !important;
+  font-size: 18px !important;
+  width: 50px !important;
+  height: 50px !important;
+  line-height: 1 !important;
+  transition: all 0.3s ease !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+  border: none !important;
+  outline: none !important;
+  cursor: pointer !important;
+}
+
+#back-top:hover,
+.back-to-top:hover {
+  background-color: var(--title) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2) !important;
+}
+
+#back-top.show,
+.back-to-top.show {
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: translateY(0) !important;
+}
+
+@media (max-width: 767px) {
+  #back-top,
+  .back-to-top {
+    bottom: 80px !important;
+    right: 15px !important;
+    width: 48px !important;
+    height: 48px !important;
+    font-size: 16px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  #back-top,
+  .back-to-top {
+    bottom: 75px !important;
+    right: 15px !important;
+    width: 45px !important;
+    height: 45px !important;
+    font-size: 15px !important;
   }
 }
 

@@ -382,5 +382,109 @@ if (isMobile) document.body.classList.add('mobile-device');
 if (isIOS) document.body.classList.add('ios-device');
 if (isAndroid) document.body.classList.add('android-device');
 
+// ===============================
+// FLOATING BUTTONS MANAGEMENT
+// ===============================
+
+// Optimize floating buttons positioning and behavior
+function initFloatingButtons() {
+    const messengerBtn = document.querySelector('.float');
+    const whatsappLauncher = document.querySelector('.delightchat-whatsapp-launcher');
+    const backToTopBtn = document.querySelector('#back-top');
+    
+    // Ensure proper z-index stacking
+    if (messengerBtn) {
+        messengerBtn.style.zIndex = '999998';
+        
+        // Add touch optimization for iOS
+        if (isIOS) {
+            messengerBtn.style.webkitTapHighlightColor = 'transparent';
+            messengerBtn.style.webkitTouchCallout = 'none';
+        }
+        
+        // Add accessibility
+        messengerBtn.setAttribute('role', 'button');
+        messengerBtn.setAttribute('aria-label', 'Contact us on Facebook Messenger');
+        
+        // Optimize touch interaction
+        messengerBtn.addEventListener('touchstart', function(e) {
+            this.style.transform = 'scale(0.95)';
+        }, { passive: true });
+        
+        messengerBtn.addEventListener('touchend', function(e) {
+            this.style.transform = 'scale(1)';
+        }, { passive: true });
+    }
+    
+    // Optimize WhatsApp button when it loads
+    function optimizeWhatsAppButton() {
+        const whatsappBtn = document.querySelector('.delightchat-whatsapp-launcher');
+        if (whatsappBtn) {
+            whatsappBtn.style.zIndex = '999997';
+            
+            // Add accessibility
+            whatsappBtn.setAttribute('role', 'button');
+            whatsappBtn.setAttribute('aria-label', 'Contact us on WhatsApp');
+            
+            // iOS optimization
+            if (isIOS) {
+                whatsappBtn.style.webkitTapHighlightColor = 'transparent';
+                whatsappBtn.style.webkitTouchCallout = 'none';
+            }
+            
+            console.log('✅ WhatsApp button optimized');
+        }
+    }
+    
+    // Wait for WhatsApp widget to load and then optimize
+    setTimeout(optimizeWhatsAppButton, 1000);
+    setTimeout(optimizeWhatsAppButton, 3000); // Backup check
+    
+    // Back to top button optimization
+    if (backToTopBtn) {
+        backToTopBtn.style.zIndex = '999996';
+        
+        // Ensure proper display and styling
+        backToTopBtn.style.display = 'inline-flex';
+        backToTopBtn.style.alignItems = 'center';
+        backToTopBtn.style.justifyContent = 'center';
+        
+        // Use the existing show/hide logic but improve it
+        const handleScroll = throttle(() => {
+            if (window.pageYOffset > 300) {
+                backToTopBtn.classList.add('show');
+            } else {
+                backToTopBtn.classList.remove('show');
+            }
+        }, 100);
+        
+        // Remove any existing scroll listeners to avoid conflicts
+        window.removeEventListener('scroll', handleScroll);
+        window.addEventListener('scroll', handleScroll, { passive: true });
+        
+        // Add touch optimization for mobile
+        if (isMobile) {
+            backToTopBtn.addEventListener('touchstart', function(e) {
+                this.style.transform = 'translateY(-2px) scale(0.95)';
+            }, { passive: true });
+            
+            backToTopBtn.addEventListener('touchend', function(e) {
+                this.style.transform = 'translateY(-2px) scale(1)';
+            }, { passive: true });
+        }
+        
+        console.log('✅ Back-to-top button optimized');
+    }
+    
+    console.log('✅ Floating buttons initialized');
+}
+
+// Initialize on DOM ready
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initFloatingButtons);
+} else {
+    initFloatingButtons();
+}
+
 // Console info
 console.log('🍽️ Hanthana Kitchen Mobile Enhancements Loaded - v1.0');
