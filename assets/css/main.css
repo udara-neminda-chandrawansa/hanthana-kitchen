@@ -11577,10 +11577,19 @@ input.main-search-input::placeholder {
   -moz-border-radius: 10px;
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .product-big-img .dishes-thumb .circle-shape {
   position: absolute;
-  top: -10px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
 }
 @media (min-width: 576px) {
   .product-big-img .dishes-thumb .circle-shape {
@@ -11598,7 +11607,13 @@ input.main-search-input::placeholder {
   }
   .product-big-img .dishes-thumb .circle-shape {
     position: absolute;
-    top: -10px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
   }
   .product-big-img .dishes-thumb .circle-shape img {
     max-width: 283px;
